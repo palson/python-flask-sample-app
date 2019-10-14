@@ -21,6 +21,7 @@ steps:
   MyUnitTests:
     title: Running Unit tests
     stage: test
-    image: '${{MyAppDockerImage}}'
+    # image: '${{MyAppDockerImage}}'
+    image: 'cf-registry.codefresh.svc:5000/my-app-image:master'
     commands:
       - python setup.py test
